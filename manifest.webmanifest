@@ -1,0 +1,11 @@
+{
+  "name": "Строймозг — второй мозг для стройпроектов",
+  "short_name": "Строймозг",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f6f3",
+  "theme_color": "#1d2125",
+  "lang": "ru",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
