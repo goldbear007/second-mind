@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1d2125">
+<title>Строймозг</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="v-list">
+<div class="app">
+ <header class="top">
+  <div class="brand"><i></i>Строймозг</div>
+  <button class="btn hide-m" id="tContacts">Контакты</button>
+  <button class="btn hide-m" id="tGraph">Граф</button>
+  <button class="btn pri hide-m" id="tNew">+ Карточка</button>
+ </header>
+ <div class="body">
+  <aside id="side">
+   <div class="sbox">
+    <input class="inp" id="q" type="search" placeholder="Поиск по названию, полям и тексту" autocomplete="off">
+    <div class="chips" id="chips"></div>
+   </div>
+   <div id="list"></div>
+   <div class="foot">
+    <div class="sync" id="sync">Загрузка…</div>
+    <div class="row" id="driveRow"></div>
+    <div class="row">
+     <button class="btn sm" id="exp">Экспорт JSON</button>
+     <button class="btn sm" id="imp">Импорт JSON</button>
+     <input type="file" id="impFile" class="hidden" accept=".json,application/json">
+    </div>
+   </div>
+  </aside>
+  <main id="main">
+   <div id="nview"></div>
+   <div id="gview">
+    <canvas id="cv"></canvas>
+    <div class="gtool" id="gtool"></div>
+    <div class="ginfo" id="ginfo"></div>
+   </div>
+  </main>
+ </div>
+</div>
+<nav class="mnav">
+ <button id="mList" class="on">Карточки</button>
+ <button id="mContacts">Контакты</button>
+ <button id="mGraph">Граф</button>
+ <button id="mNew">+ Новая</button>
+</nav>
+<datalist id="titles"></datalist>
+<div class="toast" id="toast" role="status"></div>
+<script src="js/config.js"></script>
+<script src="js/drive.js"></script>
+<script src="js/estimate.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
